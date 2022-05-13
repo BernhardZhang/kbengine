@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="debug_helper.cpp" />
+    <ClCompile Include="debug_option.cpp" />
+    <ClCompile Include="eventhistory_stats.cpp" />
+    <ClCompile Include="profile.cpp" />
+    <ClCompile Include="profiler.cpp" />
+    <ClCompile Include="profile_handler.cpp" />
+    <ClCompile Include="script_loglevel.cpp" />
+    <ClCompile Include="sys_info.cpp" />
+    <ClCompile Include="watcher.cpp" />
+    <ClCompile Include="watch_pools.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="console_helper.h" />
+    <ClInclude Include="debug_helper.h" />
+    <ClInclude Include="debug_option.h" />
+    <ClInclude Include="eventhistory_stats.h" />
+    <ClInclude Include="memory_helper.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="profiler.h" />
+    <ClInclude Include="profile_handler.h" />
+    <ClInclude Include="script_loglevel.h" />
+    <ClInclude Include="sys_info.h" />
+    <ClInclude Include="watcher.h" />
+    <ClInclude Include="watch_pools.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="profile.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="profiler.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="sys_info.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{a8ba1ede-cf2f-4864-afbf-72e1fa5f36f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

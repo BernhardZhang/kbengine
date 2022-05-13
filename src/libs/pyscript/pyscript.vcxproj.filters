@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="copy.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="math.cpp" />
+    <ClCompile Include="pickler.cpp" />
+    <ClCompile Include="pyprofile.cpp" />
+    <ClCompile Include="pyprofile_handler.cpp" />
+    <ClCompile Include="pystruct.cpp" />
+    <ClCompile Include="pyurl.cpp" />
+    <ClCompile Include="pywatcher.cpp" />
+    <ClCompile Include="py_compression.cpp" />
+    <ClCompile Include="py_gc.cpp" />
+    <ClCompile Include="py_memorystream.cpp" />
+    <ClCompile Include="py_platform.cpp" />
+    <ClCompile Include="script.cpp" />
+    <ClCompile Include="scriptobject.cpp" />
+    <ClCompile Include="scriptstderr.cpp" />
+    <ClCompile Include="scriptstdout.cpp" />
+    <ClCompile Include="scriptstdouterr.cpp" />
+    <ClCompile Include="scriptstdouterrhook.cpp" />
+    <ClCompile Include="sequence.cpp" />
+    <ClCompile Include="vector2.cpp" />
+    <ClCompile Include="vector3.cpp" />
+    <ClCompile Include="vector4.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="copy.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="math.h" />
+    <ClInclude Include="pickler.h" />
+    <ClInclude Include="pyobject_pointer.h" />
+    <ClInclude Include="pyprofile.h" />
+    <ClInclude Include="pyprofile_handler.h" />
+    <ClInclude Include="pystruct.h" />
+    <ClInclude Include="pythread_lock.h" />
+    <ClInclude Include="pyurl.h" />
+    <ClInclude Include="pywatcher.h" />
+    <ClInclude Include="py_compression.h" />
+    <ClInclude Include="py_gc.h" />
+    <ClInclude Include="py_macros.h" />
+    <ClInclude Include="py_memorystream.h" />
+    <ClInclude Include="py_platform.h" />
+    <ClInclude Include="script.h" />
+    <ClInclude Include="scriptobject.h" />
+    <ClInclude Include="scriptstderr.h" />
+    <ClInclude Include="scriptstdout.h" />
+    <ClInclude Include="scriptstdouterr.h" />
+    <ClInclude Include="scriptstdouterrhook.h" />
+    <ClInclude Include="sequence.h" />
+    <ClInclude Include="vector2.h" />
+    <ClInclude Include="vector3.h" />
+    <ClInclude Include="vector4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pywatcher.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="scriptobject.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="script.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="scriptstderr.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="scriptstdout.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="scriptstdouterr.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="scriptstdouterrhook.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="sequence.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="map.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="py_memorystream.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{7dab3506-fc93-45f0-814e-44567f0f88dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

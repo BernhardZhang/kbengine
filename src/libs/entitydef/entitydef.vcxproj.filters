@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="datatype.cpp" />
+    <ClCompile Include="datatypes.cpp" />
+    <ClCompile Include="detaillevel.cpp" />
+    <ClCompile Include="entitycallabstract.cpp" />
+    <ClCompile Include="entitydef.cpp" />
+    <ClCompile Include="entity_call.cpp" />
+    <ClCompile Include="entity_component.cpp" />
+    <ClCompile Include="entity_component_call.cpp" />
+    <ClCompile Include="fixedarray.cpp" />
+    <ClCompile Include="fixeddict.cpp" />
+    <ClCompile Include="method.cpp" />
+    <ClCompile Include="property.cpp" />
+    <ClCompile Include="py_entitydef.cpp" />
+    <ClCompile Include="remote_entity_method.cpp" />
+    <ClCompile Include="scriptdef_module.cpp" />
+    <ClCompile Include="volatileinfo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="datatype.h" />
+    <ClInclude Include="datatypes.h" />
+    <ClInclude Include="detaillevel.h" />
+    <ClInclude Include="entities.h" />
+    <ClInclude Include="entitycallabstract.h" />
+    <ClInclude Include="entitydef.h" />
+    <ClInclude Include="entity_call.h" />
+    <ClInclude Include="entity_component.h" />
+    <ClInclude Include="entity_component_call.h" />
+    <ClInclude Include="entity_garbages.h" />
+    <ClInclude Include="entity_macro.h" />
+    <ClInclude Include="fixedarray.h" />
+    <ClInclude Include="fixeddict.h" />
+    <ClInclude Include="method.h" />
+    <ClInclude Include="property.h" />
+    <ClInclude Include="py_entitydef.h" />
+    <ClInclude Include="remote_entity_method.h" />
+    <ClInclude Include="scriptdef_module.h" />
+    <ClInclude Include="volatileinfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="entity_component.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="entity_component_call.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="entitycallabstract.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="property.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="scriptdef_module.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="entitydef.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="datatype.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="method.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{3af74de9-a9a9-49e2-a6b6-28bb8f2903db}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

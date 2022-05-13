@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ce5877e1-6f56-486a-9b33-723479aadbd9}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>server</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/libs</RemoteRootDir>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/libs</RemoteRootDir>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <OutDir>$(SolutionDir)libs\$(Platform)\$(Configuration)\</OutDir>
+    <RemoteOutRelDir>../../libs/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <MultiProcNumber>4</MultiProcNumber>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <OutDir>$(SolutionDir)libs\$(Platform)\$(Configuration)\</OutDir>
+    <RemoteOutRelDir>../../libs/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <MultiProcNumber>4</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="callbackmgr.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="components.h" />
+    <ClInclude Include="component_active_report_handler.h" />
+    <ClInclude Include="entity_app.h" />
+    <ClInclude Include="forward_messagebuffer.h" />
+    <ClInclude Include="globaldata_client.h" />
+    <ClInclude Include="globaldata_server.h" />
+    <ClInclude Include="idallocate.h" />
+    <ClInclude Include="id_component_querier.h" />
+    <ClInclude Include="kbemain.h" />
+    <ClInclude Include="machine_infos.h" />
+    <ClInclude Include="pendingLoginmgr.h" />
+    <ClInclude Include="python_app.h" />
+    <ClInclude Include="py_file_descriptor.h" />
+    <ClInclude Include="script_timers.h" />
+    <ClInclude Include="sendmail_threadtasks.h" />
+    <ClInclude Include="serverapp.h" />
+    <ClInclude Include="serverconfig.h" />
+    <ClInclude Include="server_errors.h" />
+    <ClInclude Include="shutdowner.h" />
+    <ClInclude Include="shutdown_handler.h" />
+    <ClInclude Include="signal_handler.h" />
+    <ClInclude Include="telnet_handler.h" />
+    <ClInclude Include="telnet_server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="components.cpp" />
+    <ClCompile Include="component_active_report_handler.cpp" />
+    <ClCompile Include="entity_app.cpp" />
+    <ClCompile Include="forward_messagebuffer.cpp" />
+    <ClCompile Include="globaldata_client.cpp" />
+    <ClCompile Include="globaldata_server.cpp" />
+    <ClCompile Include="idallocate.cpp" />
+    <ClCompile Include="id_component_querier.cpp" />
+    <ClCompile Include="machine_infos.cpp" />
+    <ClCompile Include="pendingLoginmgr.cpp" />
+    <ClCompile Include="python_app.cpp" />
+    <ClCompile Include="py_file_descriptor.cpp" />
+    <ClCompile Include="script_timers.cpp" />
+    <ClCompile Include="sendmail_threadtasks.cpp" />
+    <ClCompile Include="serverapp.cpp" />
+    <ClCompile Include="serverconfig.cpp" />
+    <ClCompile Include="shutdowner.cpp" />
+    <ClCompile Include="signal_handler.cpp" />
+    <ClCompile Include="telnet_handler.cpp" />
+    <ClCompile Include="telnet_server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="serverconfig.inl" />
+    <None Include="telnet_handler.inl" />
+    <None Include="telnet_server.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\helper\helper.vcxproj">
+      <Project>{f4a45029-a811-444c-9108-f8dd8da2c7c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\network\network.vcxproj">
+      <Project>{b2aec3c0-cd49-479d-a15f-84506876d783}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\pyscript\pyscript.vcxproj">
+      <Project>{58521742-b9a9-49e3-979f-741407e82ba4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../;/usr/include/python3.8/;/usr/local/include/jwsmtp-1.32/jwsmtp/</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_WATCHERS;_DEBUG;_LIB;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC;KBE_SERVER</PreprocessorDefinitions>
+      <PositionIndependentCode>false</PositionIndependentCode>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>python3.8;tinyxml</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../;/usr/include/python3.8/;/usr/local/include/jwsmtp-1.32/jwsmtp/</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_LIB;CODE_INLINE;ENABLE_WATCHERS;KBE_USE_ASSERTS;LOG4CXX_STATIC;KBE_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PositionIndependentCode>false</PositionIndependentCode>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>python3.8;tinyxml</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

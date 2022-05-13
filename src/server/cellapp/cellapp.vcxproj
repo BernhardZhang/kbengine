@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{714b4569-1371-44a2-91df-70afe1eab7c4}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>cellapp</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/server</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/server</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <RemoteOutRelDir>../../bin/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <MultiProcNumber>4</MultiProcNumber>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <RemoteOutRelDir>../../bin/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <MultiProcNumber>4</MultiProcNumber>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="all_clients.cpp" />
+    <ClCompile Include="cell.cpp" />
+    <ClCompile Include="cellapp.cpp" />
+    <ClCompile Include="cellapp_interface.cpp" />
+    <ClCompile Include="cells.cpp" />
+    <ClCompile Include="clients_remote_entity_method.cpp" />
+    <ClCompile Include="client_entity.cpp" />
+    <ClCompile Include="client_entity_method.cpp" />
+    <ClCompile Include="controller.cpp" />
+    <ClCompile Include="controllers.cpp" />
+    <ClCompile Include="coordinate_node.cpp" />
+    <ClCompile Include="coordinate_system.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="entityref.cpp" />
+    <ClCompile Include="entity_component.cpp" />
+    <ClCompile Include="entity_coordinate_node.cpp" />
+    <ClCompile Include="entity_remotemethod.cpp" />
+    <ClCompile Include="forward_message_over_handler.cpp" />
+    <ClCompile Include="ghost_manager.cpp" />
+    <ClCompile Include="history_event.cpp" />
+    <ClCompile Include="initprogress_handler.cpp" />
+    <ClCompile Include="loadnavmesh_threadtasks.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="moveto_entity_handler.cpp" />
+    <ClCompile Include="moveto_point_handler.cpp" />
+    <ClCompile Include="move_controller.cpp" />
+    <ClCompile Include="navigate_handler.cpp" />
+    <ClCompile Include="profile.cpp" />
+    <ClCompile Include="proximity_controller.cpp" />
+    <ClCompile Include="range_trigger.cpp" />
+    <ClCompile Include="range_trigger_node.cpp" />
+    <ClCompile Include="real_entity_method.cpp" />
+    <ClCompile Include="rotator_handler.cpp" />
+    <ClCompile Include="space.cpp" />
+    <ClCompile Include="spacememory.cpp" />
+    <ClCompile Include="spacememorys.cpp" />
+    <ClCompile Include="space_viewer.cpp" />
+    <ClCompile Include="trap_trigger.cpp" />
+    <ClCompile Include="turn_controller.cpp" />
+    <ClCompile Include="updatable.cpp" />
+    <ClCompile Include="updatables.cpp" />
+    <ClCompile Include="view_trigger.cpp" />
+    <ClCompile Include="watch_obj_pools.cpp" />
+    <ClCompile Include="witness.cpp" />
+    <ClCompile Include="witnessed_timeout_handler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="all_clients.h" />
+    <ClInclude Include="cell.h" />
+    <ClInclude Include="cellapp.h" />
+    <ClInclude Include="cellapp_interface.h" />
+    <ClInclude Include="cellapp_interface_macros.h" />
+    <ClInclude Include="cells.h" />
+    <ClInclude Include="clients_remote_entity_method.h" />
+    <ClInclude Include="client_entity.h" />
+    <ClInclude Include="client_entity_method.h" />
+    <ClInclude Include="controller.h" />
+    <ClInclude Include="controllers.h" />
+    <ClInclude Include="coordinate_node.h" />
+    <ClInclude Include="coordinate_system.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="entityref.h" />
+    <ClInclude Include="entity_coordinate_node.h" />
+    <ClInclude Include="entity_interface_macros.h" />
+    <ClInclude Include="entity_remotemethod.h" />
+    <ClInclude Include="forward_message_over_handler.h" />
+    <ClInclude Include="ghost_manager.h" />
+    <ClInclude Include="history_event.h" />
+    <ClInclude Include="initprogress_handler.h" />
+    <ClInclude Include="loadnavmesh_threadtasks.h" />
+    <ClInclude Include="moveto_entity_handler.h" />
+    <ClInclude Include="moveto_point_handler.h" />
+    <ClInclude Include="move_controller.h" />
+    <ClInclude Include="navigate_handler.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="proximity_controller.h" />
+    <ClInclude Include="range_trigger.h" />
+    <ClInclude Include="range_trigger_node.h" />
+    <ClInclude Include="real_entity_method.h" />
+    <ClInclude Include="rotator_handler.h" />
+    <ClInclude Include="space.h" />
+    <ClInclude Include="spacememory.h" />
+    <ClInclude Include="spacememorys.h" />
+    <ClInclude Include="space_viewer.h" />
+    <ClInclude Include="trap_trigger.h" />
+    <ClInclude Include="turn_controller.h" />
+    <ClInclude Include="updatable.h" />
+    <ClInclude Include="updatables.h" />
+    <ClInclude Include="view_trigger.h" />
+    <ClInclude Include="watch_obj_pools.h" />
+    <ClInclude Include="witness.h" />
+    <ClInclude Include="witnessed_timeout_handler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="coordinate_node.inl" />
+    <None Include="coordinate_system.inl" />
+    <None Include="entity.inl" />
+    <None Include="range_trigger.inl" />
+    <None Include="range_trigger_node.inl" />
+    <None Include="space.inl" />
+    <None Include="trap_trigger.inl" />
+    <None Include="view_trigger.inl" />
+    <None Include="witness.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\entitydef\entitydef.vcxproj">
+      <Project>{89dc40a8-6336-4ceb-94dc-32ad80ba59c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\math\math.vcxproj">
+      <Project>{5bd1ff95-fb09-43bc-baaf-02927d22e6d2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\navigation\navigation.vcxproj">
+      <Project>{71fa4ade-05e8-4e36-8db7-d7e2ddf9c403}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\resmgr\resmgr.vcxproj">
+      <Project>{0bc068af-25e2-4249-a2c8-4bd950a3c627}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\server\server.vcxproj">
+      <Project>{ce5877e1-6f56-486a-9b33-723479aadbd9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\thread\thread.vcxproj">
+      <Project>{714a4378-ed10-4a99-857c-9be30148baf1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\xml\xml.vcxproj">
+      <Project>{595fc7e8-8ee0-49b9-8343-c414500392af}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;../../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_WATCHERS;_DEBUG;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_PYTHON;LOG4CXX_STATIC;KBE_SERVER;KBE_CELLAPP</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>fmt;python3.8;pthread;log4cxx;tmxparser;tinyxml;crypto;z;curl;ssl;g3dlite;sigar</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;../../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_WATCHERS;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_PYTHON;LOG4CXX_STATIC;KBE_SERVER;KBE_CELLAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>fmt;python3.8;pthread;log4cxx;tmxparser;tinyxml;crypto;z;curl;ssl;g3dlite;sigar</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

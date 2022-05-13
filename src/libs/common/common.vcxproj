@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{58c49d62-7051-40f7-a0f5-4cf678f8f273}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>common</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/libs</RemoteRootDir>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/libs</RemoteRootDir>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <RemoteOutRelDir>../../libs/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <OutDir>$(SolutionDir)libs\$(Platform)\$(Configuration)\</OutDir>
+    <MultiProcNumber>4</MultiProcNumber>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <RemoteOutRelDir>../../libs/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <OutDir>$(SolutionDir)libs\$(Platform)\$(Configuration)\</OutDir>
+    <MultiProcNumber>4</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="blowfish.cpp" />
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="kbekey.cpp" />
+    <ClCompile Include="kbeversion.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="memorystream.cpp" />
+    <ClCompile Include="rsa.cpp" />
+    <ClCompile Include="sha1.cpp" />
+    <ClCompile Include="ssl.cpp" />
+    <ClCompile Include="strutil.cpp" />
+    <ClCompile Include="tasks.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="timestamp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="blowfish.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="deadline.h" />
+    <ClInclude Include="kbekey.h" />
+    <ClInclude Include="kbemalloc.h" />
+    <ClInclude Include="kbeversion.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="memorystream.h" />
+    <ClInclude Include="memorystream_converter.h" />
+    <ClInclude Include="objectpool.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="refcountable.h" />
+    <ClInclude Include="rsa.h" />
+    <ClInclude Include="sha1.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="smartpointer.h" />
+    <ClInclude Include="ssl.h" />
+    <ClInclude Include="stdfindif_handers.h" />
+    <ClInclude Include="stringconv.h" />
+    <ClInclude Include="strutil.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="tasks.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="timestamp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="timer.inl" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;LOG4CXX_STATIC;_DEBUG;_LIB;CODE_INLINE;KBE_USE_ASSERTS</PreprocessorDefinitions>
+      <PositionIndependentCode>false</PositionIndependentCode>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>fmt;ssl;crypto</LibraryDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;LOG4CXX_STATIC;_LIB;CODE_INLINE;KBE_USE_ASSERTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PositionIndependentCode>false</PositionIndependentCode>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>fmt;ssl;crypto</LibraryDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

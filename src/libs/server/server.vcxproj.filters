@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="components.cpp" />
+    <ClCompile Include="component_active_report_handler.cpp" />
+    <ClCompile Include="entity_app.cpp" />
+    <ClCompile Include="forward_messagebuffer.cpp" />
+    <ClCompile Include="globaldata_client.cpp" />
+    <ClCompile Include="globaldata_server.cpp" />
+    <ClCompile Include="idallocate.cpp" />
+    <ClCompile Include="id_component_querier.cpp" />
+    <ClCompile Include="machine_infos.cpp" />
+    <ClCompile Include="pendingLoginmgr.cpp" />
+    <ClCompile Include="python_app.cpp" />
+    <ClCompile Include="py_file_descriptor.cpp" />
+    <ClCompile Include="script_timers.cpp" />
+    <ClCompile Include="sendmail_threadtasks.cpp" />
+    <ClCompile Include="serverapp.cpp" />
+    <ClCompile Include="serverconfig.cpp" />
+    <ClCompile Include="shutdowner.cpp" />
+    <ClCompile Include="signal_handler.cpp" />
+    <ClCompile Include="telnet_handler.cpp" />
+    <ClCompile Include="telnet_server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="callbackmgr.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="components.h" />
+    <ClInclude Include="component_active_report_handler.h" />
+    <ClInclude Include="entity_app.h" />
+    <ClInclude Include="forward_messagebuffer.h" />
+    <ClInclude Include="globaldata_client.h" />
+    <ClInclude Include="globaldata_server.h" />
+    <ClInclude Include="idallocate.h" />
+    <ClInclude Include="id_component_querier.h" />
+    <ClInclude Include="kbemain.h" />
+    <ClInclude Include="machine_infos.h" />
+    <ClInclude Include="pendingLoginmgr.h" />
+    <ClInclude Include="python_app.h" />
+    <ClInclude Include="py_file_descriptor.h" />
+    <ClInclude Include="script_timers.h" />
+    <ClInclude Include="sendmail_threadtasks.h" />
+    <ClInclude Include="serverapp.h" />
+    <ClInclude Include="serverconfig.h" />
+    <ClInclude Include="server_errors.h" />
+    <ClInclude Include="shutdowner.h" />
+    <ClInclude Include="shutdown_handler.h" />
+    <ClInclude Include="signal_handler.h" />
+    <ClInclude Include="telnet_handler.h" />
+    <ClInclude Include="telnet_server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="serverconfig.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="telnet_handler.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="telnet_server.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{fcd90c01-c5e0-4429-803d-d9f566be6385}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

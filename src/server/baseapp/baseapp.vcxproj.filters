@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="archiver.cpp" />
+    <ClCompile Include="backuper.cpp" />
+    <ClCompile Include="baseapp.cpp" />
+    <ClCompile Include="baseapp_interface.cpp" />
+    <ClCompile Include="data_download.cpp" />
+    <ClCompile Include="data_downloads.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="entity_autoloader.cpp" />
+    <ClCompile Include="entity_component.cpp" />
+    <ClCompile Include="entity_messages_forward_handler.cpp" />
+    <ClCompile Include="entity_remotemethod.cpp" />
+    <ClCompile Include="forward_message_over_handler.cpp" />
+    <ClCompile Include="initprogress_handler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="profile.cpp" />
+    <ClCompile Include="proxy.cpp" />
+    <ClCompile Include="proxy_forwarder.cpp" />
+    <ClCompile Include="restore_entity_handler.cpp" />
+    <ClCompile Include="space.cpp" />
+    <ClCompile Include="sync_entitystreamtemplate_handler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="archiver.h" />
+    <ClInclude Include="backuper.h" />
+    <ClInclude Include="baseapp.h" />
+    <ClInclude Include="baseapp_interface.h" />
+    <ClInclude Include="baseapp_interface_macros.h" />
+    <ClInclude Include="data_download.h" />
+    <ClInclude Include="data_downloads.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="entity_autoloader.h" />
+    <ClInclude Include="entity_interface_macros.h" />
+    <ClInclude Include="entity_messages_forward_handler.h" />
+    <ClInclude Include="entity_remotemethod.h" />
+    <ClInclude Include="forward_message_over_handler.h" />
+    <ClInclude Include="initprogress_handler.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="proxy.h" />
+    <ClInclude Include="proxy_forwarder.h" />
+    <ClInclude Include="proxy_interface_macros.h" />
+    <ClInclude Include="restore_entity_handler.h" />
+    <ClInclude Include="space.h" />
+    <ClInclude Include="sync_entitystreamtemplate_handler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="proxy.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="space.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+    <None Include="entity.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{a2de372b-10df-48a0-b71a-bc46547a7163}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

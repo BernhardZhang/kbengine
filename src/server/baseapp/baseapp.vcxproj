@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{931f84eb-e10e-492b-939f-362c3c319604}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>baseapp</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/server</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/server</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <RemoteOutRelDir>../../bin/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <MultiProcNumber>4</MultiProcNumber>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <RemoteOutRelDir>../../bin/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <MultiProcNumber>4</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="archiver.cpp" />
+    <ClCompile Include="backuper.cpp" />
+    <ClCompile Include="baseapp.cpp" />
+    <ClCompile Include="baseapp_interface.cpp" />
+    <ClCompile Include="data_download.cpp" />
+    <ClCompile Include="data_downloads.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="entity_autoloader.cpp" />
+    <ClCompile Include="entity_component.cpp" />
+    <ClCompile Include="entity_messages_forward_handler.cpp" />
+    <ClCompile Include="entity_remotemethod.cpp" />
+    <ClCompile Include="forward_message_over_handler.cpp" />
+    <ClCompile Include="initprogress_handler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="profile.cpp" />
+    <ClCompile Include="proxy.cpp" />
+    <ClCompile Include="proxy_forwarder.cpp" />
+    <ClCompile Include="restore_entity_handler.cpp" />
+    <ClCompile Include="space.cpp" />
+    <ClCompile Include="sync_entitystreamtemplate_handler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="archiver.h" />
+    <ClInclude Include="backuper.h" />
+    <ClInclude Include="baseapp.h" />
+    <ClInclude Include="baseapp_interface.h" />
+    <ClInclude Include="baseapp_interface_macros.h" />
+    <ClInclude Include="data_download.h" />
+    <ClInclude Include="data_downloads.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="entity_autoloader.h" />
+    <ClInclude Include="entity_interface_macros.h" />
+    <ClInclude Include="entity_messages_forward_handler.h" />
+    <ClInclude Include="entity_remotemethod.h" />
+    <ClInclude Include="forward_message_over_handler.h" />
+    <ClInclude Include="initprogress_handler.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="proxy.h" />
+    <ClInclude Include="proxy_forwarder.h" />
+    <ClInclude Include="proxy_interface_macros.h" />
+    <ClInclude Include="restore_entity_handler.h" />
+    <ClInclude Include="space.h" />
+    <ClInclude Include="sync_entitystreamtemplate_handler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="entity.inl" />
+    <None Include="proxy.inl" />
+    <None Include="space.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\entitydef\entitydef.vcxproj">
+      <Project>{89dc40a8-6336-4ceb-94dc-32ad80ba59c0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\resmgr\resmgr.vcxproj">
+      <Project>{0bc068af-25e2-4249-a2c8-4bd950a3c627}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\server\server.vcxproj">
+      <Project>{ce5877e1-6f56-486a-9b33-723479aadbd9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\libs\thread\thread.vcxproj">
+      <Project>{714a4378-ed10-4a99-857c-9be30148baf1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;../../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_DEBUG;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_PYTHON;LOG4CXX_STATIC;KBE_SERVER;KBE_BASEAPP</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>python3.8;pthread;log4cxx;fmt;tinyxml;ssl;crypto;jwsmtp;g3dlite;curl;sigar</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;../../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_PYTHON;LOG4CXX_STATIC;KBE_SERVER;KBE_BASEAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>python3.8;pthread;log4cxx;fmt;tinyxml;ssl;crypto;jwsmtp;g3dlite;curl;sigar</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

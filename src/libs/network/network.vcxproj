@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{b2aec3c0-cd49-479d-a15f-84506876d783}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>network</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/libs</RemoteRootDir>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>~/projects/$(SolutionName)/src/libs</RemoteRootDir>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemoteOutRelDir>../../libs/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <OutDir>$(SolutionDir)libs\$(Platform)\$(Configuration)\</OutDir>
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <MultiProcNumber>4</MultiProcNumber>
+    <EnableASAN>true</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemoteOutRelDir>../../libs/$(Platform)/$(Configuration)</RemoteOutRelDir>
+    <OutDir>$(SolutionDir)libs\$(Platform)\$(Configuration)\</OutDir>
+    <EnableIncrementalBuild>WithNinja</EnableIncrementalBuild>
+    <MultiProcNumber>4</MultiProcNumber>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <EnableIncrementalBuild>No</EnableIncrementalBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="address.cpp" />
+    <ClCompile Include="bundle.cpp" />
+    <ClCompile Include="bundle_broadcast.cpp" />
+    <ClCompile Include="channel.cpp" />
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="delayed_channels.cpp" />
+    <ClCompile Include="encryption_filter.cpp" />
+    <ClCompile Include="endpoint.cpp" />
+    <ClCompile Include="error_reporter.cpp" />
+    <ClCompile Include="event_dispatcher.cpp" />
+    <ClCompile Include="event_poller.cpp" />
+    <ClCompile Include="fixed_messages.cpp" />
+    <ClCompile Include="http_utility.cpp" />
+    <ClCompile Include="ikcp.c" />
+    <ClCompile Include="interface_defs.cpp" />
+    <ClCompile Include="kcp_packet_reader.cpp" />
+    <ClCompile Include="kcp_packet_receiver.cpp" />
+    <ClCompile Include="kcp_packet_sender.cpp" />
+    <ClCompile Include="listener_receiver.cpp" />
+    <ClCompile Include="listener_tcp_receiver.cpp" />
+    <ClCompile Include="listener_udp_receiver.cpp" />
+    <ClCompile Include="message_handler.cpp" />
+    <ClCompile Include="network_interface.cpp" />
+    <ClCompile Include="network_stats.cpp" />
+    <ClCompile Include="packet_filter.cpp" />
+    <ClCompile Include="packet_reader.cpp" />
+    <ClCompile Include="packet_receiver.cpp" />
+    <ClCompile Include="packet_sender.cpp" />
+    <ClCompile Include="poller_epoll.cpp" />
+    <ClCompile Include="poller_select.cpp" />
+    <ClCompile Include="tcp_packet.cpp" />
+    <ClCompile Include="tcp_packet_receiver.cpp" />
+    <ClCompile Include="tcp_packet_sender.cpp" />
+    <ClCompile Include="udp_packet.cpp" />
+    <ClCompile Include="udp_packet_receiver.cpp" />
+    <ClCompile Include="udp_packet_sender.cpp" />
+    <ClCompile Include="websocket_packet_filter.cpp" />
+    <ClCompile Include="websocket_packet_reader.cpp" />
+    <ClCompile Include="websocket_protocol.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="address.h" />
+    <ClInclude Include="bundle.h" />
+    <ClInclude Include="bundle_broadcast.h" />
+    <ClInclude Include="channel.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="delayed_channels.h" />
+    <ClInclude Include="encryption_filter.h" />
+    <ClInclude Include="endpoint.h" />
+    <ClInclude Include="error_reporter.h" />
+    <ClInclude Include="event_dispatcher.h" />
+    <ClInclude Include="event_poller.h" />
+    <ClInclude Include="fixed_messages.h" />
+    <ClInclude Include="http_utility.h" />
+    <ClInclude Include="ikcp.h" />
+    <ClInclude Include="interfaces.h" />
+    <ClInclude Include="interface_defs.h" />
+    <ClInclude Include="kcp_packet_reader.h" />
+    <ClInclude Include="kcp_packet_receiver.h" />
+    <ClInclude Include="kcp_packet_sender.h" />
+    <ClInclude Include="listener_receiver.h" />
+    <ClInclude Include="listener_tcp_receiver.h" />
+    <ClInclude Include="listener_udp_receiver.h" />
+    <ClInclude Include="message_handler.h" />
+    <ClInclude Include="network_exception.h" />
+    <ClInclude Include="network_interface.h" />
+    <ClInclude Include="network_stats.h" />
+    <ClInclude Include="packet.h" />
+    <ClInclude Include="packet_filter.h" />
+    <ClInclude Include="packet_reader.h" />
+    <ClInclude Include="packet_receiver.h" />
+    <ClInclude Include="packet_sender.h" />
+    <ClInclude Include="poller_epoll.h" />
+    <ClInclude Include="poller_select.h" />
+    <ClInclude Include="tcp_packet.h" />
+    <ClInclude Include="tcp_packet_receiver.h" />
+    <ClInclude Include="tcp_packet_sender.h" />
+    <ClInclude Include="udp_packet.h" />
+    <ClInclude Include="udp_packet_receiver.h" />
+    <ClInclude Include="udp_packet_sender.h" />
+    <ClInclude Include="websocket_packet_filter.h" />
+    <ClInclude Include="websocket_packet_reader.h" />
+    <ClInclude Include="websocket_protocol.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bundle.inl" />
+    <None Include="bundle_broadcast.inl" />
+    <None Include="channel.inl" />
+    <None Include="endpoint.inl" />
+    <None Include="error_reporter.inl" />
+    <None Include="event_dispatcher.inl" />
+    <None Include="kcp_packet_receiver.inl" />
+    <None Include="kcp_packet_sender.inl" />
+    <None Include="listener_receiver.inl" />
+    <None Include="listener_tcp_receiver.inl" />
+    <None Include="listener_udp_receiver.inl" />
+    <None Include="network_interface.inl" />
+    <None Include="packet_filter.inl" />
+    <None Include="packet_receiver.inl" />
+    <None Include="packet_sender.inl" />
+    <None Include="tcp_packet.inl" />
+    <None Include="tcp_packet_receiver.inl" />
+    <None Include="tcp_packet_sender.inl" />
+    <None Include="udp_packet.inl" />
+    <None Include="udp_packet_receiver.inl" />
+    <None Include="udp_packet_sender.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\common.vcxproj">
+      <Project>{58c49d62-7051-40f7-a0f5-4cf678f8f273}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_STATICLIB;USE_OPENSSL;ENABLE_WATCHERS;_DEBUG;_LIB;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC</PreprocessorDefinitions>
+      <PositionIndependentCode>false</PositionIndependentCode>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>fmt;tinyxml;ssl;curl</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_STATICLIB;USE_OPENSSL;ENABLE_WATCHERS;_LIB;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PositionIndependentCode>false</PositionIndependentCode>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>fmt;tinyxml;ssl;curl</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

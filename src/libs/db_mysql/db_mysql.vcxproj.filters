@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="db_exception.cpp" />
+    <ClCompile Include="db_interface_mysql.cpp" />
+    <ClCompile Include="db_transaction.cpp" />
+    <ClCompile Include="entity_sqlstatement_mapping.cpp" />
+    <ClCompile Include="entity_table_mysql.cpp" />
+    <ClCompile Include="kbe_table_mysql.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="db_context.h" />
+    <ClInclude Include="db_exception.h" />
+    <ClInclude Include="db_interface_mysql.h" />
+    <ClInclude Include="db_transaction.h" />
+    <ClInclude Include="entity_sqlstatement_mapping.h" />
+    <ClInclude Include="entity_table_mysql.h" />
+    <ClInclude Include="kbe_table_mysql.h" />
+    <ClInclude Include="read_entity_helper.h" />
+    <ClInclude Include="remove_entity_helper.h" />
+    <ClInclude Include="sqlstatement.h" />
+    <ClInclude Include="write_entity_helper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{747cad3b-bdeb-4538-a6e4-e5a87f02ca92}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="entity_table_mysql.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

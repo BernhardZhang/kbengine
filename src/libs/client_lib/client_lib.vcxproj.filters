@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="clientapp.cpp" />
+    <ClCompile Include="clientobjectbase.cpp" />
+    <ClCompile Include="client_interface.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="entity_aspect.cpp" />
+    <ClCompile Include="entity_component.cpp" />
+    <ClCompile Include="event.cpp" />
+    <ClCompile Include="moveto_point_handler.cpp" />
+    <ClCompile Include="profile.cpp" />
+    <ClCompile Include="script_callbacks.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clientapp.h" />
+    <ClInclude Include="clientobjectbase.h" />
+    <ClInclude Include="client_interface.h" />
+    <ClInclude Include="client_interface_macros.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="entity_aspect.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="kbemain.h" />
+    <ClInclude Include="moveto_point_handler.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="script_callbacks.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{d474da4b-0f49-4c5a-809b-51820414af31}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="entity.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

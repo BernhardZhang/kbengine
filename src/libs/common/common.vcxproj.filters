@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="blowfish.cpp" />
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="kbekey.cpp" />
+    <ClCompile Include="kbeversion.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="memorystream.cpp" />
+    <ClCompile Include="rsa.cpp" />
+    <ClCompile Include="sha1.cpp" />
+    <ClCompile Include="ssl.cpp" />
+    <ClCompile Include="strutil.cpp" />
+    <ClCompile Include="tasks.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="timestamp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="blowfish.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="deadline.h" />
+    <ClInclude Include="kbekey.h" />
+    <ClInclude Include="kbemalloc.h" />
+    <ClInclude Include="kbeversion.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="memorystream.h" />
+    <ClInclude Include="memorystream_converter.h" />
+    <ClInclude Include="objectpool.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="refcountable.h" />
+    <ClInclude Include="rsa.h" />
+    <ClInclude Include="sha1.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="smartpointer.h" />
+    <ClInclude Include="ssl.h" />
+    <ClInclude Include="stdfindif_handers.h" />
+    <ClInclude Include="stringconv.h" />
+    <ClInclude Include="strutil.h" />
+    <ClInclude Include="task.h" />
+    <ClInclude Include="tasks.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="timestamp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{77f71b30-cfb6-4cc7-b162-549b6a00c143}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="timer.inl">
+      <Filter>Inline Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
