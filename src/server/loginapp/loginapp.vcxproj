@@ -127,20 +127,20 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;/usr/local/include/jwsmtp-1.32/jwsmtp/;../../</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../libs;../;/usr/local/include/jwsmtp-1.32/jwsmtp/;../../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_DEBUG;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_PYTHON;LOG4CXX_STATIC;KBE_SERVER;KBE_LOGINAPP</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>fmt;pthread;python3.8;log4cxx;tinyxml;ssl;crypto;sigar;curl;jwsmtp;g3dlite</LibraryDependencies>
+      <LibraryDependencies>fmt;pthread;python3.10;log4cxx;tinyxml;ssl;crypto;sigar;curl;jwsmtp;g3dlite;tirpc</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;/usr/local/include/jwsmtp-1.32/jwsmtp/;../../</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../libs;../;/usr/local/include/jwsmtp-1.32/jwsmtp/;../../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_PYTHON;LOG4CXX_STATIC;KBE_SERVER;KBE_LOGINAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>fmt;pthread;python3.8;log4cxx;tinyxml;ssl;crypto;sigar;curl;jwsmtp;g3dlite</LibraryDependencies>
+      <LibraryDependencies>fmt;pthread;python3.10;log4cxx;tinyxml;ssl;crypto;sigar;curl;jwsmtp;g3dlite;tirpc</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

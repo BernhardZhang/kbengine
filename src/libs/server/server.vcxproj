@@ -165,7 +165,7 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../;/usr/include/python3.8/;/usr/local/include/jwsmtp-1.32/jwsmtp/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../;/usr/include/python3.10/;/usr/local/include/jwsmtp-1.32/jwsmtp/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ENABLE_WATCHERS;_DEBUG;_LIB;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC;KBE_SERVER</PreprocessorDefinitions>
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
@@ -175,7 +175,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../;/usr/include/python3.8/;/usr/local/include/jwsmtp-1.32/jwsmtp/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../;/usr/include/python3.10/;/usr/local/include/jwsmtp-1.32/jwsmtp/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_LIB;CODE_INLINE;ENABLE_WATCHERS;KBE_USE_ASSERTS;LOG4CXX_STATIC;KBE_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>

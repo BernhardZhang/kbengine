@@ -137,21 +137,21 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;../../</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../libs;../;../../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_DEBUG;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_KBE_MYSQL;USE_KBE_REDIS;LOG4CXX_STATIC;KBE_SERVER;KBE_DBMGR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>python3.8;pthread;fmt;log4cxx;tinyxml;ssl;crypto;mysqlclient;curl;hiredis;g3dlite;sigar</LibraryDependencies>
+      <LibraryDependencies>python3.10;pthread;fmt;log4cxx;tinyxml;ssl;crypto;mysqlclient;curl;hiredis;g3dlite;sigar;tirpc</LibraryDependencies>
       <AdditionalLibraryDirectories>/usr/lib64/mysql/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../;../../</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../libs;../;../../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;USE_KBE_MYSQL;USE_KBE_REDIS;LOG4CXX_STATIC;KBE_SERVER;KBE_DBMGR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>python3.8;pthread;fmt;log4cxx;tinyxml;ssl;crypto;mysqlclient;curl;hiredis;g3dlite;sigar</LibraryDependencies>
+      <LibraryDependencies>python3.10;pthread;fmt;log4cxx;tinyxml;ssl;crypto;mysqlclient;curl;hiredis;g3dlite;sigar;tirpc</LibraryDependencies>
       <AdditionalLibraryDirectories>/usr/lib64/mysql/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

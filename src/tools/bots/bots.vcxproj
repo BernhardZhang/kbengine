@@ -134,20 +134,20 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../../server;../../</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../libs;../../server;../../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_DEBUG;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC;KBE_SERVER;KBE_MACHINE</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>python3.8;pthread;fmt;log4cxx;tinyxml;ssl;crypto;sigar;curl;g3dlite</LibraryDependencies>
+      <LibraryDependencies>python3.10;pthread;fmt;log4cxx;tinyxml;ssl;crypto;sigar;curl;g3dlite;tirpc</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../../libs;/usr/include/python3.8/;../../server;../../</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../libs;../../server;../../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_CONSOLE;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC;KBE_SERVER;KBE_MACHINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <LibraryDependencies>python3.8;pthread;fmt;log4cxx;tinyxml;ssl;crypto;sigar;curl;g3dlite</LibraryDependencies>
+      <LibraryDependencies>python3.10;pthread;fmt;log4cxx;tinyxml;ssl;crypto;sigar;curl;g3dlite;tirpc</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

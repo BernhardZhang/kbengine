@@ -121,7 +121,7 @@
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../;/usr/include/python3.8/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_DEBUG;_LIB;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC</PreprocessorDefinitions>
       <PositionIndependentCode>false</PositionIndependentCode>
@@ -132,7 +132,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../;/usr/include/python3.8/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../;/usr/include/python3.10/</AdditionalIncludeDirectories>
       <CppLanguageStandard>c++11</CppLanguageStandard>
       <PreprocessorDefinitions>USE_OPENSSL;ENABLE_WATCHERS;_LIB;CODE_INLINE;KBE_USE_ASSERTS;LOG4CXX_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PositionIndependentCode>false</PositionIndependentCode>
