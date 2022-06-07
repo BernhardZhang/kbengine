@@ -150,7 +150,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>fmt;ssl;crypto</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
     </Link>
@@ -162,7 +163,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>fmt;ssl;crypto</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
     </Link>

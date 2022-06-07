@@ -130,7 +130,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>mysqlclient;python3.8;fmt</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,7 +141,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>mysqlclient;python3.8;fmt</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

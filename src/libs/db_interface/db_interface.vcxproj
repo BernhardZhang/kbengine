@@ -127,7 +127,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>python3.8</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -138,7 +139,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>python3.8</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -110,7 +110,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>tinyxml</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
     </Link>
@@ -122,7 +123,8 @@
       <PositionIndependentCode>false</PositionIndependentCode>
     </ClCompile>
     <Link>
-      <LibraryDependencies>tinyxml</LibraryDependencies>
+      <LibraryDependencies>
+      </LibraryDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
     </Link>
